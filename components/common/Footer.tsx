@@ -70,7 +70,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
         {/* Branding */}
         <div className="footer-section font-bold leading-snug text-2xl sm:text-4xl md:col-span-1 text-gray-800">
-          Kolhapur <br /> Inspire <br /> Academy<br />
+           Inspire <br /> Academy<br />Kolhapur 
           {/* For Bright Futures<br /><span className="font-medium text-gray-500">Empowering Students for IIT-JEE & NEET</span> */}
         </div>
 

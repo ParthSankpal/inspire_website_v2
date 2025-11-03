@@ -100,9 +100,9 @@ export default function Header() {
     }, []);
 
     return (
-        <div className="min-h-[calc(100svh-40px)] bg-white text-black grid grid-cols-2 md:grid-cols-5 grid-rows-3 mb-10">
+        <div className="min-h-[calc(100svh-40px)] bg-white text-black grid grid-cols-2 md:grid-cols-5 grid-rows-3 mb-20">
             {/* Date Block */}
-            <div className="fade-section flex flex-col justify-start items-start p-4 md:p-6 border border-gray-300 border-px backdrop-blur-xl shadow-md">
+            <div className="fade-section flex flex-col justify-start items-start p-4 md:p-8 border border-gray-300 border-px">
                 <div className="">
                         <span className="bg-blue-600 text-white px-3 py-1 rounded-full font-semibold text-4xl">2026</span>
                     <h3 className="text-base md:text-2xl font-semibold space-y-2 tracking-wide">
@@ -173,7 +173,7 @@ export default function Header() {
             </div>
 
             {/* Main Text Section */}
-            <div className="fade-section col-span-2 md:col-span-3 row-span-2 flex flex-col justify-end border border-gray-300 border-px backdrop-blur-lg p-8 md:p-12 shadow-xl">
+            <div className="fade-section col-span-2 md:col-span-3 row-span-2 flex flex-col justify-end border border-gray-300 border-px backdrop-blur-lg p-4 md:p-8">
                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
                     Discover the <br /> future of the web
                 </h1>
