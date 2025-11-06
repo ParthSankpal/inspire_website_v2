@@ -118,6 +118,14 @@
   font-weight: 500;
   color:#1a1c4a;
 }
+
+.gabarito-500 {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
