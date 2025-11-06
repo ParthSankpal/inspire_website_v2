@@ -3,7 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaBehance, FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +61,7 @@ const Footer = () => {
           <h2 className="text-xl sm:text-3xl font-semibold">
             Contact <span className="relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[3px] after:bg-[#1a1c4a]">us</span>
           </h2>
-          <div className="w-8 h-8 rounded-full bg-[#1a1c4a] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+          <div className="w-8 h-8 rounded-full bg-[#ea018c] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
             <FaArrowRight className="text-white w-6 h-6" />
           </div>
         </div>
@@ -70,7 +71,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
         {/* Branding */}
         <div className="footer-section font-bold leading-snug text-2xl sm:text-4xl md:col-span-1 text-gray-800">
-           Inspire <br /> Academy<br />Kolhapur 
+          Inspire <br /> Academy<br />Kolhapur
           {/* For Bright Futures<br /><span className="font-medium text-gray-500">Empowering Students for IIT-JEE & NEET</span> */}
         </div>
 
@@ -82,18 +83,65 @@ const Footer = () => {
           </p> */}
           <div className="font-semibold mb-2 uppercase">
 
-            <p>Phone :  7020525430</p>
+            {/* <p>Phone :  7020525430</p> */}
             <p>Phone :  7972961299</p>
           </div>
 
           <p className="mb-2">FOLLOW US</p>
-          <div className="flex gap-4">
-            <a href="#"><img src="https://simpleicons.org/icons/behance.svg" alt="Behance" className="w-5 h-5" /></a>
-            <a href="#"><img src="https://simpleicons.org/icons/dribbble.svg" alt="Dribbble" className="w-5 h-5" /></a>
-            <a href="https://www.instagram.com/inspire.academy.kolhapur/?hl=en" target='blank'><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram" className="w-5 h-5" /></a>
-            <a href="#"><img src="https://simpleicons.org/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5" /></a>
+
+          <div className="flex gap-4 items-center">
+            {/* Behance */}
+            {/* <a
+              href="https://www.behance.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#0057ff] transition-colors duration-300"
+            >
+              <FaBehance  className="w-5 h-5 " />
+            </a> */}
+
+            {/* Dribbble */}
+            {/* <a
+              href="https://dribbble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-pink-500 transition-colors duration-300"
+            >
+              <FaDribbble  className="w-5 h-5 " />
+            </a> */}
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/inspire.academy.kolhapur/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#E1306C] transition-colors duration-300"
+            >
+              <FaInstagram  className="w-5 h-5 " />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/inspire-academy-kolhapur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#0A66C2] transition-colors duration-300"
+            >
+              <FaLinkedinIn  className="w-5 h-5 " />
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/inspireacademy99/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#1877F2] transition-colors duration-300"
+            >
+              <FaFacebookF  className="w-5 h-5 " />
+            </a>
           </div>
-          
+
+
         </div>
 
         {/* Newsletter & Social */}
@@ -103,7 +151,7 @@ const Footer = () => {
           <p>Upper Ground Floor, Jaduban Plaza, <br /> A wing, and, near Panch Bunglow, <br /> opposite to HDFC Bank, E Ward, Shahupuri, Kolhapur, Maharashtra 416001</p>
           <a href="https://maps.app.goo.gl/2AAnH46DKFvLHsdV7" target='_blank' className="underline mt-2 inline-block hover:text-gray-300 transition">SEE ON MAP →</a>
 
-          
+
         </div>
       </div>
     </footer>

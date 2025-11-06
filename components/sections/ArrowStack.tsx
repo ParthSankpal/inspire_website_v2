@@ -43,7 +43,7 @@ export default function ArrowStack() {
                     ref={(el) => {
                         arrowsRef.current[i] = el;
                     }}
-                    className="w-7 h-7 border-b-5 border-r-5 rotate-45 border-[#5FC5B8] absolute"
+                    className="w-7 h-7 border-b-5 border-r-5 rotate-45 border-[#ea018c] absolute"
                 />
             ))}
         </div>

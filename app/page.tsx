@@ -1,4 +1,5 @@
 "use client"
+import CoursesBentoGrid from "@/components/sections/CoursesBentoGrid";
 import Header from "@/components/sections/Header";
 import PressureSection from "@/components/sections/PressureSection";
 import WhyChoose from "@/components/sections/WhyChoose";
@@ -18,7 +19,8 @@ export default function Home() {
       <div>
         <Header />
         <WhyChoose/>
-        <PressureSection/>
+        {/* <PressureSection/> */}
+        <CoursesBentoGrid/>
       </div>
     </div>
   );

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { montserrat, fustat } from "./fonts";
-import Navbar from "@/components/common/Navbar";
+import dynamic from "next/dynamic";
+
+
 import Footer from "@/components/common/Footer";
+import ClientNavbarWrapper from "@/components/ClientNavbarWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +27,7 @@ export default function RootLayout({
           <div className=" sr-only">
             Tailwind grid copy
           </div>
-          <Navbar />
+         <ClientNavbarWrapper />
           <div className="  grid flex-1 grid-rows-[1fr_auto] overflow-clip grid-cols-[1fr_var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)_1fr] [--gutter-width:--spacing(6)] lg:[--gutter-width:--spacing(10)]">
             <div className="col-start-2 row-span-full row-start-1 max-sm:hidden text-gray-950/5 border-x border-x-current bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"></div>
             <div className="col-start-4 row-span-full row-start-1 max-sm:hidden text-gray-950/5 border-x border-x-current bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"></div>

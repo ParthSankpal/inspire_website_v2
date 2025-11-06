@@ -1,5 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 const reasons = [
   // {
@@ -87,13 +89,13 @@ const WhyChoose: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-10 bg-[#1a1c4a] rounded-full p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 bg-[#1a1c4a] rounded-full p-3 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm px-5">
             Join 1000+ students who trust Inspire Academy for their future success.
           </p>
-          <button className="flex items-center gap-2 bg-white text-[#0f103e] px-4 py-2 rounded-full text-sm font-semibold transition hover:bg-gray-200">
+          <Link href="/contact" className="flex items-center gap-2 bg-white text-[#0f103e] px-4 py-2 rounded-full text-sm font-semibold transition hover:bg-gray-200">
             Start Your Journey <FaArrowRight className="text-xs" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -100,11 +100,11 @@ export default function Header() {
     }, []);
 
     return (
-        <div className="min-h-[calc(100svh-40px)] bg-white text-black grid grid-cols-2 md:grid-cols-5 grid-rows-3 mb-20">
+        <div className="min-h-[calc(100svh-40px)] bg-white grid grid-cols-2 md:grid-cols-5 grid-rows-3 mb-20">
             {/* Date Block */}
             <div className="fade-section flex flex-col justify-start items-start p-4 md:p-8 border border-gray-300 border-px">
                 <div className="">
-                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full font-semibold text-4xl">2026</span>
+                        <span className="bg-[#ea018c] text-white px-3 py-1 rounded-full font-semibold text-4xl">2026</span>
                     <h3 className="text-base md:text-2xl font-semibold space-y-2 tracking-wide">
                         <br />
                         Admission Open
@@ -243,7 +243,7 @@ export default function Header() {
         bg-white rounded-full p-1.5
         transform rotate-0
         transition-transform duration-700 ease-in-out
-        group-hover:rotate-[90deg]
+        group-hover:rotate-45
         shadow-md
       "
                     />

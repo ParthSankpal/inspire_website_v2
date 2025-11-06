@@ -80,7 +80,7 @@ export default function PressureSection() {
             <div className=''>
                 <div ref={headingRef}>
 
-                    <h4 className="text-[#5FC5B8] font-semibold text-base uppercase tracking-wide">We get it</h4>
+                    <h4 className="text-[#ea018c] font-semibold text-base uppercase tracking-wide">We get it</h4>
                     <h2 className="text-3xl md:text-[40px] font-semibold  text-[#081D25] mt-3 max-w-5xl mx-auto">
                         The pressure to deliver flawless technology solutions can wear down even the most seasoned professionals.
                     </h2>
@@ -92,7 +92,7 @@ export default function PressureSection() {
                             pointRefs.current[colIndex] = el;
                         }}
                             key={colIndex} className=" max-w-2/3 mx-auto sm:max-w-full flex flex-col items-center text-[#081D25]">
-                            <div className="text-[#5FC5B8] mb-3 text-base">{point.icon}</div>
+                            <div className="text-[#ea018c] mb-3 text-base">{point.icon}</div>
                             <p className="text-lg font-medium mb-4 text-center px-2 ">{point.top}</p>
 
                             <div className=' h-20'>
