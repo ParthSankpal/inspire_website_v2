@@ -100,7 +100,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div className="min-h-[calc(100svh-40px)] bg-white grid grid-cols-2 md:grid-cols-5 grid-rows-3 mb-20">
+        <div className="min-h-[calc(100svh-40px)] bg-white grid grid-cols-2 md:grid-cols-5 grid-rows-3 pb-20">
             {/* Date Block */}
             <div className="fade-section flex flex-col justify-start items-start p-4 md:p-8 border border-gray-300 border-px">
                 <div className="">
