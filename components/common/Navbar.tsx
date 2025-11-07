@@ -30,69 +30,45 @@ type CourseCard = {
   subtitle: string;
   description: string;
   image: string;
-  colspan?: string;
   slug: string;
 };
 
-const mainCourses: CourseCard[] = [
+const courses: CourseCard[] = [
   {
     className: "11–12th",
-    course: "JEE Main",
-    subtitle: "Target + Foundation",
-    description: "Rigorous training for JEE Mains with advanced fundamentals.",
+    course: "PCM",
+    subtitle: "Engineering Entrance",
+    description:
+      "Comprehensive JEE (Main + Advanced), MHT-CET, BITSAT & VITEEE preparation.",
     image: "/images/class11.jpg",
-    slug: "jee",
+    slug: "pcm",
   },
   {
     className: "11–12th",
-    course: "JEE Advanced",
-    subtitle: "IIT Preparation",
-    description: "Master problem-solving and advanced JEE concepts.",
-    image: "/images/class11.jpg",
-    slug: "jee-advanced",
-  },
-  {
-    className: "11–12th",
-    course: "NEET",
+    course: "PCB",
     subtitle: "Medical Entrance",
-    description: "Concept clarity and MCQ practice for top NEET ranks.",
+    description:
+      "Target NEET-UG & IISER with conceptual clarity and intensive MCQ practice.",
     image: "/images/class11.jpg",
-    slug: "neet",
+    slug: "pcb",
   },
   {
-    className: "11–12th",
-    course: "MHT-CET",
-    subtitle: "State Board + CET Focused",
-    description: "Balanced approach for board exams and CET success.",
-    image: "/images/class11.jpg",
-    slug: "mht-cet",
-  },
-];
-
-const foundationCourses: CourseCard[] = [
-  {
-    className: "8th Class",
+    className: "8th–10th",
     course: "Foundation",
     subtitle: "NTSE & Olympiad Track",
-    description: "Strengthen basics & build curiosity for science & math.",
+    description:
+      "Strong fundamentals for NTSE, Olympiads, and Homi Bhabha exams.",
     image: "/images/class8.jpg",
-    slug: "foundation-8",
+    slug: "foundation",
   },
   {
-    className: "9th Class",
-    course: "Foundation",
-    subtitle: "Target NTSE & Olympiads",
-    description: "Early exposure to conceptual and competitive preparation.",
-    image: "/images/class9.jpg",
-    slug: "foundation-9",
-  },
-  {
-    className: "10th Class",
-    course: "Foundation",
-    subtitle: "Boards + Competitive Readiness",
-    description: "Prepare for boards while developing problem-solving habits.",
-    image: "/images/class10.jpg",
-    slug: "foundation-10",
+    className: "8th–10th (CBSE)",
+    course: "Foundation CBSE",
+    subtitle: "Coming Soon",
+    description:
+      "CBSE-aligned foundation course for early conceptual development.",
+    image: "/images/class8.jpg",
+    slug: "foundation-cbse",
   },
 ];
 
@@ -151,7 +127,6 @@ export default function Navbar() {
     }
   }, [mobileOpen]);
 
-  // Closes mobile + accordion when link is clicked
   const handleLinkClick = () => {
     setMobileOpen(false);
     setAccordionValue(undefined);
@@ -160,7 +135,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/80"
+      className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur supports-backdrop-filter:bg-white/80"
     >
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-10 py-3">
         {/* Logo */}
@@ -182,43 +157,22 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-6 p-4 md:w-[700px] md:grid-cols-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-2 text-sm">Main Courses</h3>
-                      <ul className="space-y-2">
-                        {mainCourses.map((c) => (
-                          <ListItem
-                            key={c.slug}
-                            title={c.course}
-                            href={`/courses/${c.slug}`}
-                            onClick={handleLinkClick}
-                          >
-                            {c.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-2 text-sm">
-                        Foundation (8th–10th)
-                      </h3>
-                      <ul className="space-y-2">
-                        {foundationCourses.map((c) => (
-                          <ListItem
-                            key={c.slug}
-                            title={c.className}
-                            href={`/courses/${c.slug}`}
-                            onClick={handleLinkClick}
-                          >
-                            {c.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <ul className="grid gap-2 p-4 md:w-[600px] md:grid-cols-2">
+                    {courses.map((c) => (
+                      <ListItem
+                        key={c.slug}
+                        title={`${c.className} – ${c.course}`}
+                        href={`/courses/${c.slug}`}
+                        onClick={handleLinkClick}
+                      >
+                        {c.description}
+                      </ListItem>
+                    ))}
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Test Series */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                   <Link href="/test-series" onClick={handleLinkClick}>
@@ -227,6 +181,7 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
+              {/* Results */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Results</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -251,7 +206,12 @@ export default function Navbar() {
                           </div>
                         </li>
                       ) : (
-                        <ListItem key={r.title} title={r.title} href={r.href} onClick={handleLinkClick}>
+                        <ListItem
+                          key={r.title}
+                          title={r.title}
+                          href={r.href}
+                          onClick={handleLinkClick}
+                        >
                           Academic results of Inspire Academy students.
                         </ListItem>
                       )
@@ -260,6 +220,7 @@ export default function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* More */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>More</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -304,7 +265,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden bg-white border-t border-gray-200 shadow-inner fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] overflow-y-auto"
+          className="md:hidden bg-white border-t border-gray-200 shadow-inner fixed top-16 left-0 w-full h-[calc(100vh-64px)] overflow-y-auto"
         >
           <Accordion
             type="single"
@@ -317,32 +278,16 @@ export default function Navbar() {
             <AccordionItem value="courses">
               <AccordionTrigger>Courses</AccordionTrigger>
               <AccordionContent className="pl-3 space-y-3">
-                <div>
-                  <p className="text-sm font-semibold text-gray-700">Main Courses</p>
-                  {mainCourses.map((c) => (
-                    <Link
-                      key={c.slug}
-                      href={`/courses/${c.slug}`}
-                      onClick={handleLinkClick}
-                      className="block text-sm text-gray-600 hover:text-blue-600 pl-3 py-1"
-                    >
-                      {c.course}
-                    </Link>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-700">Foundation (8th–10th)</p>
-                  {foundationCourses.map((c) => (
-                    <Link
-                      key={c.slug}
-                      href={`/courses/${c.slug}`}
-                      onClick={handleLinkClick}
-                      className="block text-sm text-gray-600 hover:text-blue-600 pl-3 py-1"
-                    >
-                      {c.className}
-                    </Link>
-                  ))}
-                </div>
+                {courses.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/courses/${c.slug}`}
+                    onClick={handleLinkClick}
+                    className="block text-sm text-gray-600 hover:text-blue-600 pl-3 py-1"
+                  >
+                    {c.className} – {c.course}
+                  </Link>
+                ))}
               </AccordionContent>
             </AccordionItem>
 
