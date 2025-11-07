@@ -1,0 +1,130 @@
+{
+  "jee": {
+    "title": "JEE Main",
+    "slug": "jee",
+    "syllabus": "Physics, Chemistry, and Mathematics from Class 11 and 12 NCERT curriculum.",
+    "month": "Two sessions — January and April",
+    "examPattern": {
+      "mode": "Computer-Based Test (CBT)",
+      "duration": "3 hours",
+      "questions": "75 questions (25 each in Physics, Chemistry, Mathematics)",
+      "markingScheme": "+4 for correct answer, -1 for incorrect answer. No negative for numerical type questions (20 MCQs, 5 Numerical).",
+      "totalMarks": "300 Marks (100 each subject)"
+    },
+    "topColleges": ["NITs", "IIITs", "CFTIs"],
+    "attempts": "Twice a year; no restriction on number of attempts across years.",
+    "totalColleges": "31 NITs, 25 IIITs, and other institutions.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with PCM",
+      "marks": "Minimum 75% aggregate (65% for SC/ST) in 12th or Top 20 percentile in board."
+    }
+  },
+  "jee-advanced": {
+    "title": "JEE Advanced",
+    "slug": "jee-advanced",
+    "syllabus": "Advanced topics in Physics, Chemistry, and Mathematics beyond JEE Main level.",
+    "month": "May",
+    "examPattern": {
+      "mode": "Computer-Based Test",
+      "papers": "Two mandatory papers (Paper 1 & 2)",
+      "questionTypes": "MCQs, numerical answer, and matching type questions.",
+      "markingScheme": "Varies; includes negative marking of -1 or -2 for incorrect answers."
+    },
+    "topColleges": ["23 IITs across India"],
+    "attempts": "Maximum of two attempts in two consecutive years.",
+    "qualifyingCriteria": {
+      "academic": "Top 2.5 lakh JEE Main rankers",
+      "marks": "75% in 12th PCM (65% SC/ST/PwD) or top 20 percentile in board."
+    }
+  },
+  "mht-cet": {
+    "title": "MHT-CET (PCM)",
+    "slug": "mht-cet",
+    "syllabus": "Physics, Chemistry, and Mathematics from Maharashtra Board's Class 11 (20%) and Class 12 (80%) syllabus.",
+    "month": "April or May",
+    "examPattern": {
+      "mode": "Computer-Based Test",
+      "questions": "150 (50 each in Physics, Chemistry, Mathematics)",
+      "markingScheme": "+2 for Mathematics, +1 for Physics & Chemistry; No negative marking.",
+      "totalMarks": "200"
+    },
+    "topColleges": ["COEP Pune", "VJTI Mumbai", "ICT Mumbai"],
+    "attempts": "Once a year.",
+    "totalColleges": "300+ Engineering colleges in Maharashtra.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with PCM",
+      "marks": "Minimum 50% in 12th PCM (40% for SC/ST/PwD)."
+    }
+  },
+  "bitsat": {
+    "title": "BITSAT",
+    "slug": "bitsat",
+    "syllabus": "Physics, Chemistry, Mathematics/Biology, English Proficiency, and Logical Reasoning (Class 11 & 12 NCERT).",
+    "month": "May-June",
+    "examPattern": {
+      "mode": "Computer-Based Test",
+      "questions": "130 questions",
+      "markingScheme": "+3 for correct, -1 for incorrect",
+      "totalMarks": "390 Marks (Physics & Chemistry 90 each, Maths/Bio 120, English 30, LR 60)"
+    },
+    "topColleges": ["BITS Pilani", "BITS Goa", "BITS Hyderabad", "BITS Dubai"],
+    "attempts": "Max 2 attempts per year.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with PCM & English",
+      "marks": "75% in PCM, 60% individually in each subject."
+    }
+  },
+  "viteee": {
+    "title": "VITEEE",
+    "slug": "viteee",
+    "syllabus": "Physics, Chemistry, Mathematics/Biology, English, and Aptitude (Class 11 & 12).",
+    "month": "April",
+    "examPattern": {
+      "mode": "Computer-Based Test",
+      "questions": "125 MCQs",
+      "markingScheme": "+1 for correct, no negative marking."
+    },
+    "topColleges": ["VIT Vellore", "VIT Chennai", "VIT Bhopal", "VIT-AP"],
+    "attempts": "Once a year.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with PCM/PCB",
+      "marks": "Minimum 60% (65% for SC/ST/PwD)."
+    }
+  },
+  "iiser": {
+    "title": "IISER Aptitude Test (IAT)",
+    "slug": "iiser",
+    "syllabus": "Biology, Chemistry, Mathematics, and Physics (Class 11 & 12).",
+    "month": "May",
+    "examPattern": {
+      "mode": "Computer-Based Test",
+      "questions": "60 (15 from each subject)",
+      "markingScheme": "+3 for correct, -1 for incorrect."
+    },
+    "topColleges": ["IISER Pune", "Kolkata", "Mohali", "Bhopal", "Thiruvananthapuram", "Tirupati", "Berhampur"],
+    "attempts": "Once a year.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with science (appearing/passed)",
+      "marks": "Minimum percentile cutoff (varies by board/year)."
+    }
+  },
+  "neet": {
+    "title": "NEET-UG",
+    "slug": "neet",
+    "syllabus": "Physics, Chemistry, and Biology (Botany & Zoology) from Class 11 & 12 NCERT.",
+    "month": "May",
+    "examPattern": {
+      "mode": "Offline (Pen-and-Paper)",
+      "duration": "3 hours",
+      "questions": "180 MCQs (45 Physics, 45 Chemistry, 90 Biology)",
+      "markingScheme": "+4 for correct, -1 for incorrect.",
+      "totalMarks": "720 (Physics 180, Chemistry 180, Biology 360)"
+    },
+    "topColleges": ["AIIMS", "JIPMER", "AFMC", "Government & Private Medical Colleges"],
+    "attempts": "No limit on attempts.",
+    "qualifyingCriteria": {
+      "academic": "10+2 with PCB",
+      "marks": "Minimum 50% aggregate (40% for SC/ST, 45% for PWD)."
+    }
+  }
+}

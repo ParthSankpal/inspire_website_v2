@@ -158,7 +158,7 @@ export default function CoursesBentoGrid() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white flex flex-col items-center justify-center py-16  text-center"
+      className="bg-white flex flex-col items-center justify-center py-12 md:py-20  text-center"
     >
       {/* ===== Main Courses Section ===== */}
       <div ref={mainHeadingRef}>
@@ -195,7 +195,7 @@ export default function CoursesBentoGrid() {
                 alt={course.className}
                 width={400}
                 height={250}
-                className="w-full h-40 object-cover"
+                className="w-full hidden md:block md:h-40 object-cover"
               />
             </div>
           ))}
@@ -227,7 +227,7 @@ export default function CoursesBentoGrid() {
               <div className="p-6 flex flex-col justify-between h-full">
                 <div>
                   <h3 className="text-lg font-semibold opacity-90">{course.className}</h3>
-                  <h2 className="text-3xl md:text-[32px] font-bold mt-1">{course.course}</h2>
+                  <h2 className="text-2xl md:text-[32px] font-bold mt-1">{course.course}</h2>
                   <p className="text-sm mt-1 opacity-90">{course.subtitle}</p>
                 </div>
                 <p className="text-xs mt-4 opacity-80">{course.description}</p>
@@ -237,7 +237,7 @@ export default function CoursesBentoGrid() {
                 alt={course.className}
                 width={400}
                 height={250}
-                className="w-full h-40 object-cover"
+                className="w-full hidden md:block md:h-40 object-cover"
               />
             </div>
           ))}

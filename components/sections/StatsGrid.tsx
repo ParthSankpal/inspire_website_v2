@@ -103,7 +103,7 @@ export default function StatsAchievementsGrid() {
           Our Achievements
         </h4>
         <h2 className="text-3xl md:text-[40px] font-semibold mt-3">
-          Consistent Results and Record-Breaking Performances
+          Consistent Results and Record-Breaking Performances From Last 7 Years
         </h2>
       </div>
 

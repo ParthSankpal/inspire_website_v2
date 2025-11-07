@@ -3,6 +3,7 @@ import CoursesBentoGrid from "@/components/sections/CoursesBentoGrid";
 import Header from "@/components/sections/Header";
 import PressureSection from "@/components/sections/PressureSection";
 import StatsGrid from "@/components/sections/StatsGrid";
+import TestimonialsGrid from "@/components/sections/TestimonialsGrid";
 import WhyChoose from "@/components/sections/WhyChoose";
 import { fadeInUp } from "@/lib/gsap";
 import { useEffect, useRef } from "react";
@@ -23,6 +24,7 @@ export default function Home() {
         <WhyChoose/>
         {/* <PressureSection/> */}
         <CoursesBentoGrid/>
+        <TestimonialsGrid/>
       </div>
     </div>
   );
