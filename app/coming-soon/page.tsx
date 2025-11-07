@@ -13,8 +13,8 @@ export default function ComingSoon() {
       gsap.from(".fade-up", {
         opacity: 0,
         y: 40,
-        duration: 0.8,
-        stagger: 0.2,
+        duration: 1,
+        // stagger: 0.2,
         ease: "power3.out",
       });
     }, containerRef);
