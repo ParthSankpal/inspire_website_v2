@@ -218,34 +218,34 @@ export default function Header() {
 
             {/* Watch Recordings CTA */}
             <div className="fade-section col-span-2 row-span-1 border border-gray-300 border-px p-4 md:p-6 transition-all hover:p-0 duration-700 ease-in-out 
-      transform  relative overflow-hidden group">
+                transform  relative overflow-hidden group">
                 <div
                     className="
-      bg-yellow-400 flex justify-between items-center h-full 
-      p-6 md:p-8
-      shadow-xl cursor-pointer 
-      
-      group-hover:brightness-105
-      relative overflow-hidden
-    "
+                        bg-yellow-400 flex justify-between items-center h-full 
+                        p-6 md:p-8
+                        shadow-xl cursor-pointer 
+                        
+                        group-hover:brightness-105
+                        relative overflow-hidden
+                        "
                 >
                     {/* Text */}
                     <span className="text-black text-lg md:text-xl montserrat-500 font-semibold z-10">
-                        Watch recordings
+                        View All Results
                     </span>
 
                     {/* Lucide Icon (Top-right corner, rotated 45° → 90° on hover) */}
                     <BsArrowUpRight
                         className="
-        absolute top-5 right-5 
-        w-6 h-6 md:w-7 md:h-7 
-        text-black 
-        bg-white rounded-full p-1.5
-        transform rotate-0
-        transition-transform duration-700 ease-in-out
-        group-hover:rotate-45
-        shadow-md
-      "
+                            absolute top-5 right-5 
+                            w-6 h-6 md:w-7 md:h-7 
+                            text-black 
+                            bg-white rounded-full p-1.5
+                            transform rotate-0
+                            transition-transform duration-700 ease-in-out
+                            group-hover:rotate-45
+                            shadow-md
+                        "
                     />
 
                     {/* Optional Animated Overlay */}

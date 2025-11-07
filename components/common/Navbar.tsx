@@ -164,6 +164,7 @@ export default function Navbar() {
                         title={`${c.className} – ${c.course}`}
                         href={`/courses/${c.slug}`}
                         onClick={handleLinkClick}
+                        className=" hover:text-[#5696F6] bg-none"
                       >
                         {c.description}
                       </ListItem>
@@ -198,7 +199,7 @@ export default function Navbar() {
                                 key={sub.title}
                                 href={sub.href}
                                 onClick={handleLinkClick}
-                                className="text-sm text-gray-600 hover:text-blue-600 transition"
+                                className="text-sm text-gray-600 hover:text-[#5696F6] transition"
                               >
                                 {sub.title}
                               </Link>
@@ -244,10 +245,10 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="hidden md:flex gap-5 items-center">
-          <Link href="/about" onClick={handleLinkClick} className="hover:text-blue-600">
+          <Link href="/about" onClick={handleLinkClick} className="hover:text-[#5696F6]">
             About
           </Link>
-          <Link href="/contact" onClick={handleLinkClick} className="hover:text-blue-600">
+          <Link href="/contact" onClick={handleLinkClick} className="hover:text-[#5696F6]">
             Contact
           </Link>
         </div>

@@ -96,11 +96,73 @@ useEffect(() => {
       className="min-h-screen flex flex-col justify-center bg-white px-6 py-10"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+       
+       <div ref={formSectionRef} className="space-y-6 block md:hidden">
+
+        <h1
+            ref={headerRef}
+            className="text-6xl md:text-7xl font-bold tracking-wide uppercase mb-10"
+          >
+            Contact
+          </h1>
+
+
+          <p className="leading-relaxed">
+            We’re dedicated to providing outstanding customer service. Please
+            don’t hesitate to contact us if you have any questions or inquiries.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input
+                type="email"
+                required
+                placeholder="Email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
+              />
+              <input
+                type="tel"
+                required
+                placeholder="Mobile Number"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
+              />
+            </div>
+
+            <label className="flex items-center gap-2 text-sm">
+              <input type="checkbox" required className="accent-gray-700" />
+              I agree with the{" "}
+              <a href="#" className="underline">
+                Privacy Policy
+              </a>
+            </label>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-black text-white font-semibold py-3 rounded-md hover:bg-gray-800 transition disabled:opacity-60"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+
+            {message && (
+              <p className="text-center text-sm pt-2">{message}</p>
+            )}
+          </form>
+        </div>
+       
         {/* Left - Info */}
         <div className="space-y-6">
           <h1
             ref={headerRef}
-            className="text-6xl md:text-7xl font-bold tracking-wide uppercase mb-10"
+            className="text-6xl hidden md:block md:text-7xl font-bold tracking-wide uppercase mb-10"
           >
             Contact
           </h1>
@@ -134,7 +196,7 @@ useEffect(() => {
         </div>
 
         {/* Right - Form */}
-        <div ref={formSectionRef} className="space-y-6">
+        <div ref={formSectionRef} className="space-y-6 hidden md:block">
           <p className="leading-relaxed">
             We’re dedicated to providing outstanding customer service. Please
             don’t hesitate to contact us if you have any questions or inquiries.

@@ -89,7 +89,7 @@ const WhyChoose: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-10 bg-[#1a1c4a] rounded-full p-3 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 text-center  md:bg-[#1a1c4a] rounded-full p-3 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm px-5">
             Join 1000+ students who trust Inspire Academy for their future success.
           </p>

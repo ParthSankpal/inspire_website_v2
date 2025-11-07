@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaArrowRight, FaBehance, FaDribbble, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from 'next/link';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -55,15 +56,15 @@ const Footer = () => {
   return (
     <footer ref={footerRef} className=" montserrat-500  bg-white px-6 py-12 md:px-16 md:py-20">
       {/* Top CTA Row */}
-      <div className="footer-section flex flex-col md:flex-row justify-between items-center mb-14 border-b border-white/10 pb-10">
-        <div className="text-sm text-white/70 mb-4 md:mb-0">HEARD ENOUGH? →</div>
+      <div className="footer-section flex flex-col md:flex-row justify-end items-center mb-14 border-b border-white/10 pb-10">
+        
         <div className="flex items-center gap-4">
           <h2 className="text-xl sm:text-3xl font-semibold">
             Contact <span className="relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[3px] after:bg-[#1a1c4a]">us</span>
           </h2>
-          <div className="w-8 h-8 rounded-full bg-[#ea018c] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+          <Link href="/contact" className="w-8 h-8 rounded-full bg-[#ea018c] flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
             <FaArrowRight className="text-white w-6 h-6" />
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -71,7 +72,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
         {/* Branding */}
         <div className="footer-section font-bold leading-snug text-2xl sm:text-4xl md:col-span-1 text-gray-800">
-          Inspire <br /> Academy<br />Kolhapur
+          Inspire Academy Kolhapur
           {/* For Bright Futures<br /><span className="font-medium text-gray-500">Empowering Students for IIT-JEE & NEET</span> */}
         </div>
 

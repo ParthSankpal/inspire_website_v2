@@ -26,7 +26,7 @@ const mainCourses: CourseCard[] = [
     subtitle: "Target + Foundation",
     description: "Rigorous training for JEE Mains with advanced fundamentals.",
     image: "/images/class11.jpg",
-    slug: "jee",
+    slug: "pcm",
   },
   {
     className: "11–12th",
@@ -34,7 +34,7 @@ const mainCourses: CourseCard[] = [
     subtitle: "IIT Preparation",
     description: "Master problem-solving and advanced JEE concepts.",
     image: "/images/class11.jpg",
-    slug: "jee-advanced",
+    slug: "pcm",
   },
   {
     className: "11–12th",
@@ -42,7 +42,7 @@ const mainCourses: CourseCard[] = [
     subtitle: "Medical Entrance",
     description: "Concept clarity and MCQ practice for top NEET ranks.",
     image: "/images/class11.jpg",
-    slug: "neet",
+    slug: "pcb",
   },
   {
     className: "11–12th",
@@ -50,7 +50,7 @@ const mainCourses: CourseCard[] = [
     subtitle: "State Board + CET Focused",
     description: "Balanced approach for board exams and CET success.",
     image: "/images/class11.jpg",
-    slug: "mht-cet",
+    slug: "pcm",
   },
 ];
 
@@ -61,7 +61,7 @@ const foundationCourses: CourseCard[] = [
     subtitle: "NTSE & Olympiad Track",
     description: "Strengthen basics & build curiosity for science & math.",
     image: "/images/class8.jpg",
-    slug: "foundation-8",
+    slug: "foundation",
   },
   {
     className: "9th Class",
@@ -69,7 +69,7 @@ const foundationCourses: CourseCard[] = [
     subtitle: "Target NTSE & Olympiads",
     description: "Early exposure to conceptual and competitive preparation.",
     image: "/images/class9.jpg",
-    slug: "foundation-9",
+    slug: "foundation",
   },
   {
     className: "10th Class",
@@ -78,8 +78,9 @@ const foundationCourses: CourseCard[] = [
     description: "Prepare for boards while developing problem-solving habits.",
     image: "/images/class10.jpg",
     colspan:"sm:col-span-2 lg:col-span-1",
-    slug: "foundation-10",
+    slug: "foundation",
   },
+  
 ];
 
 export default function CoursesBentoGrid() {

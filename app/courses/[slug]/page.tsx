@@ -1,7 +1,13 @@
 "use client";
 
-import { getExamData, CourseData } from "@/lib/getExamData";
+import { getExamData } from "@/lib/getExamData";
 import { useParams } from "next/navigation";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function CourseDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,23 +26,87 @@ export default function CourseDetailPage() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16">
       {/* Title & Description */}
-      <h1 className="text-3xl md:text-4xl font-bold ">{data.title}</h1>
+      <h1 className="text-3xl md:text-4xl font-bold">{data.title}</h1>
       <p className="text-gray-700 mt-3">{data.description}</p>
 
-      {/* Exams Covered */}
-      <div className="mt-8">
-        <h3 className="font-semibold text-lg text-gray-800">Exams Covered</h3>
-        <ul className="list-disc ml-6 text-[#5696F6]">
+      {/* ====================== Exams Covered (Now with Accordion) ====================== */}
+      <div className="mt-10">
+        <h3 className="font-semibold text-lg text-gray-800 mb-4">
+          Exams Covered
+        </h3>
+
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {data.exams.map((exam, i) => (
-            <li key={i}>{exam}</li>
+            <AccordionItem key={i} value={`exam-${i}`} className="group">
+              <AccordionTrigger className="text-lg font-semibold no-underline text-[#5696F6]">
+                {exam.title}
+              </AccordionTrigger>
+              <AccordionContent className="relative text-gray-700 space-y-3 leading-relaxed overflow-hidden">
+                {/* Watermark */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-data-[state=open]:opacity-10 transition-opacity duration-700 ease-in-out pointer-events-none select-none">
+                  <span className="text-6xl md:text-8xl font-bold text-gray-400 whitespace-nowrap">
+                    Inspire Academy
+                  </span>
+                </div>
+
+
+                {/* Actual Accordion Content */}
+                <div className="relative z-10 space-y-3">
+                  <p>
+                    <strong>Syllabus:</strong> {exam.syllabus}
+                  </p>
+                  <p>
+                    <strong>Tentative Month:</strong> {exam.month}
+                  </p>
+
+                  <div>
+                    <strong>Exam Pattern:</strong>
+                    <ul className="list-disc ml-6">
+                      {Object.entries(exam.examPattern).map(([k, v]) => (
+                        <li key={k}>
+                          <span className="font-medium">{k}:</span> {v}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <strong>Top Colleges:</strong>
+                    <ul className="list-disc ml-6">
+                      {exam.topColleges.map((c, j) => (
+                        <li key={j}>{c}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <p>
+                    <strong>Attempts:</strong> {exam.attempts}
+                  </p>
+
+                  <div>
+                    <strong>Qualifying Criteria:</strong>
+                    <ul className="list-disc ml-6">
+                      {Object.entries(exam.qualifyingCriteria).map(([k, v]) => (
+                        <li key={k}>
+                          <span className="font-medium">{k}:</span> {v}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </AccordionContent>
+
+            </AccordionItem>
           ))}
-        </ul>
+        </Accordion>
+
+        <p className=" italic mt-4 text-sm md:text-base">*Please note that the number of colleges and specific details may vary each year. It's advisable to
+          check the official websites of the respective exams for the most accurate and updated information.</p>
       </div>
 
       {/* ====================== Schedule Section ====================== */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold  mb-4">{schedule.title}</h2>
-
+      <div className="mt-16">
+        <h2 className="text-2xl font-semibold mb-4">{schedule.title}</h2>
         {schedule.type === "upcoming" ? (
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md text-gray-700">
             <p>{schedule.message}</p>
@@ -45,7 +115,7 @@ export default function CourseDetailPage() {
           <>
             <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-300 text-sm md:text-base">
-                <thead className="bg-blue-50 ">
+                <thead className="bg-blue-50">
                   <tr>
                     <th className="px-4 py-2 border">Time Slot</th>
                     <th className="px-4 py-2 border">Activity Description</th>
@@ -62,10 +132,9 @@ export default function CourseDetailPage() {
               </table>
             </div>
 
-            {/* Weekly Test Plan */}
             {"weeklyTest" in schedule && schedule.weeklyTest && (
               <div className="mt-10">
-                <h2 className="text-2xl font-semibold  mb-3">
+                <h2 className="text-2xl font-semibold mb-3">
                   {schedule.weeklyTest.title}
                 </h2>
                 <div className="text-gray-700 space-y-4">
@@ -94,18 +163,15 @@ export default function CourseDetailPage() {
                   )}
 
                   {schedule.weeklyTest.description && (
-                    <div>
-                      <p>{schedule.weeklyTest.description}</p>
-                    </div>
+                    <p>{schedule.weeklyTest.description}</p>
                   )}
                 </div>
               </div>
             )}
+
           </>
         )}
       </div>
-
-     
     </section>
   );
 }
