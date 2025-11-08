@@ -226,7 +226,7 @@ useEffect(() => {
               />
             </div>
 
-            <label className="flex items-center gap-2 text-sm">
+            <label className="flex items-center gap-2 text-sm text-[#ea018c]">
               <input type="checkbox" required className="accent-gray-700" />
               I agree with the{" "}
               <a href="#" className="underline">
@@ -237,7 +237,7 @@ useEffect(() => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-black text-white font-semibold py-3 rounded-md hover:bg-gray-800 transition disabled:opacity-60"
+              className="w-full bg-[#1a1c4a] cursor-pointer text-white font-semibold py-3 rounded-md transition disabled:opacity-60"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
