@@ -25,7 +25,7 @@ export default function ComingSoon() {
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#0f103e] to-[#343896] text-white text-center px-6"
+      className="flex flex-col items-center justify-center min-h-screen bg-linear-to-br from-[#0f103e] to-[#343896] text-white text-center px-6"
     >
       <div className="fade-up">
         <h1 className="text-5xl md:text-6xl font-bold mb-4">
