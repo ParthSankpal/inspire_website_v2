@@ -122,7 +122,7 @@ const WhyChoose: React.FC = () => {
         <p className="why-subtitle text-sm uppercase tracking-wider text-blue-300 mb-2">
           Powerful Reasons
         </p>
-        <h2 className="why-heading text-3xl font-bold mb-10">
+        <h2 className="why-heading text-3xl md:text-[40px] font-bold mb-10">
           Why Students & Parents Choose Inspire Academy
         </h2>
 

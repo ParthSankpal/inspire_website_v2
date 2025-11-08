@@ -135,7 +135,7 @@ export default function CoursesBentoGrid() {
     // Animate all Course Cards (staggered one by one)
     gsap.fromTo(
       cardRefs.current,
-      { y: 80, opacity: 0 },
+      { y: 50, opacity: 0 },
       {
         y: 0,
         opacity: 1,
