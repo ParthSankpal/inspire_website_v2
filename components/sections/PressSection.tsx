@@ -91,7 +91,7 @@ const PressSection: React.FC = () => {
 
 
             <div className="">
-                <div className="max-w-7xl mx-auto flex items-center justify-between mb-10">
+                <div className="max-w-7xl mx-auto flex items-center justify-between mb-10  px-6">
                     <h2 className="press-title text-3xl md:text-[42px] font-extrabold text-gray-900">
                         In The Press
                     </h2>

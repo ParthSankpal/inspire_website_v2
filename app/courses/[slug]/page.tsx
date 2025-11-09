@@ -152,14 +152,18 @@ export default function CourseDetailPage() {
                     </ul>
                   </div>
 
-                  <div>
-                    <strong>Top Colleges:</strong>
-                    <ul className="list-disc ml-6">
-                      {exam.topColleges.map((c, j) => (
-                        <li key={j}>{c}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  {exam.topColleges.length > 0 && (
+
+                    <div>
+
+                      <strong>Top Colleges:</strong>
+                      <ul className="list-disc ml-6">
+                        {exam.topColleges.map((c, j) => (
+                          <li key={j}>{c}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <p>
                     <strong>Attempts:</strong> {exam.attempts}

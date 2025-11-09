@@ -162,8 +162,8 @@ export default function CoursesBentoGrid() {
       className="bg-white flex flex-col items-center justify-center py-12 md:py-20  text-center"
     >
       {/* ===== Main Courses Section ===== */}
-      <div ref={mainHeadingRef}>
-        <h4 className="text-[#ea018c] font-semibold text-sm uppercase tracking-wide">
+      <div ref={mainHeadingRef} className=" px-6">
+        <h4 className="text-[#ea018c] font-semibold text-sm uppercase  tracking-wide">
           Our Programs
         </h4>
         <h2 className="text-3xl md:text-[40px] font-semibold  mt-3 max-w-5xl mx-auto">
@@ -205,7 +205,7 @@ export default function CoursesBentoGrid() {
 
       {/* ===== Foundation Courses Section ===== */}
       <div className="mt-24 w-full max-w-6xl">
-        <div ref={foundationHeadingRef}>
+        <div ref={foundationHeadingRef} className=" px-6">
           <h4 className="text-[#ea018c] font-semibold text-sm uppercase tracking-wide">
             Foundation Courses
           </h4>

@@ -95,10 +95,10 @@ export default function StatsAchievementsGrid() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white  w-full flex flex-col items-center justify-center py-20 "
+      className="bg-white  w-full flex flex-col items-center justify-center  py-20 "
     >
       {/* ===== Heading ===== */}
-      <div className="text-center mb-12 max-w-4xl mx-auto">
+      <div className="text-center mb-12 max-w-4xl mx-auto px-6">
         <h4 className="text-[#ea018c] font-semibold text-sm uppercase tracking-wide">
           Our Achievements
         </h4>

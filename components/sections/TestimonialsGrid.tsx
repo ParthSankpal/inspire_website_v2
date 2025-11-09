@@ -116,7 +116,7 @@ export default function TestimonialsGrid() {
       className="bg-white flex flex-col items-center justify-center py-12 md:py-20 text-center"
     >
       {/* ===== Section Heading ===== */}
-      <div ref={headingRef} className="max-w-4xl mx-auto">
+      <div ref={headingRef} className="max-w-4xl mx-auto  px-6">
         <h4 className="text-[#ea018c] font-semibold text-sm uppercase tracking-wide">
           Student & Parent Voices
         </h4>
