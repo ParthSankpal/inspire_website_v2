@@ -337,12 +337,12 @@ export const getExamData = (slug: string): CourseData | null => {
 
     // ------------------ CBSE FOUNDATION ------------------
     "foundation-cbse": {
-      title: "CBSE Foundation Program (Class 8–10)",
+      title: "CBSE Academic Program (Class 8–10)",
       description:
         "Upcoming program focusing on conceptual strengthening in Science, Mathematics, English, and Social Science aligned with CBSE & NCERT standards.",
       exams: [
         {
-          title: "CBSE Academic Curriculum",
+          title: "CBSE Academics Curriculum",
           syllabus:
             "Science, Mathematics, English, and Social Science as per CBSE & NCERT guidelines.",
           month: "Academic year schedule.",
@@ -356,7 +356,7 @@ export const getExamData = (slug: string): CourseData | null => {
         type: "upcoming",
         title: "Schedule Coming Soon",
         message:
-          "Our CBSE Foundation Program will be launched soon with structured schedules and assessment plans.",
+          "Our CBSE Academic Program will be launched soon with structured schedules and assessment plans.",
       },
     },
   };

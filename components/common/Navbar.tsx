@@ -63,7 +63,7 @@ const courses: CourseCard[] = [
   },
   {
     className: "8th–10th (CBSE)",
-    course: "Foundation CBSE",
+    course: "Academics CBSE",
     subtitle: "Coming Soon",
     description:
       "CBSE-aligned foundation course for early conceptual development.",
