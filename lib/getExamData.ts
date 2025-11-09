@@ -339,7 +339,7 @@ export const getExamData = (slug: string): CourseData | null => {
     "foundation-cbse": {
       title: "CBSE Academic Program (Class 8–10)",
       description:
-        "Upcoming program focusing on conceptual strengthening in Science, Mathematics, English, and Social Science aligned with CBSE & NCERT standards.",
+        "Upcoming program focusing on conceptual strengthening in Science, Mathematics, English, and Social Science, aligned with CBSE and NCERT standards, based on the NEP 2020 competency-based learning pattern.",
       exams: [
         {
           title: "CBSE Academics Curriculum",
