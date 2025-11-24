@@ -182,8 +182,15 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {/* Results */}
               <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/results" onClick={handleLinkClick}>
+                    Results
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              {/* Results */}
+              {/* <NavigationMenuItem>
                 <NavigationMenuTrigger>Results</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 md:w-[400px] md:grid-cols-2">
@@ -219,7 +226,7 @@ export default function Navbar() {
                     )}
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
 
               {/* More */}
               <NavigationMenuItem>
