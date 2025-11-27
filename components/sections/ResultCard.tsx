@@ -28,7 +28,7 @@ export const ResultCard = ({
     <div className="border relative transition-all duration-300 p-5 text-center ">
 
       {/* Photo */}
-      {photo && (
+      {/* {photo && (
         <div className="flex justify-center mb-4">
           <Image
             src={`https://drive.google.com/uc?export=view&id=${photo}`}
@@ -38,7 +38,7 @@ export const ResultCard = ({
             className="w-40 h-40 object-cover object-center rounded-full border shadow"
           />
         </div>
-      )}
+      )} */}
 
 
       {/* Name */}
