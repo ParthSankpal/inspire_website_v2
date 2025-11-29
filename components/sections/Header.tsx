@@ -24,7 +24,7 @@ export default function Header() {
         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
     ];
     const block2Images = [
-         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
@@ -111,12 +111,12 @@ export default function Header() {
             {/* Date Block */}
             <div className="fade-section flex flex-col col-span-2 md:col-span-1 justify-center md:justify-start items-start p-4 md:p-8 border border-gray-300 border-px">
                 <div className="">
-                        <span className="bg-[#ea018c] text-white px-3 py-1 rounded-full font-semibold text-4xl">2026</span>
+                    <span className="bg-[#ea018c] text-white px-3 py-1 rounded-full font-semibold text-4xl">2026</span>
                     <h3 className="text-base md:text-2xl font-semibold space-y-2 tracking-wide">
                         <br />
                         Admission Open
                     </h3>
-                   
+
                 </div>
                 <h3>
                     For IIT-JEE, NEET, MHT-CET, Foundation
@@ -193,10 +193,9 @@ export default function Header() {
                     Where Ambition  <br /> Meets Precision.
                 </h1>
                 <p className="text-base md:text-lg text-gray-700 max-w-xl">
-                    Join us at{" "}
-                    <span className="font-semibold">Inspire Academy</span> and
-                    explore how the learning, and creativity are evolving in the AI
-                    age — helping students and innovators adapt faster and smarter.
+                    Join us at <span className="font-semibold">Inspire Academy</span> and
+                    discover a structured learning system built on quality teaching, discipline,
+                    and proven academic results.
                 </p>
             </div>
 
@@ -223,7 +222,7 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block6)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
             >
-               <Image
+                <Image
                     height={200}
                     width={200}
                     src={block6Images[0]}
