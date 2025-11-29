@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { BsArrowUpRight } from "react-icons/bs";
+import Image from "next/image";
 
 export default function Header() {
     // Refs for each animated image block
@@ -13,35 +14,41 @@ export default function Header() {
     const block5 = useRef(null);
     const block6 = useRef(null);
 
-    // Independent image arrays for each block
+    // Independent image arrays for each blockhttps://drive.google.com/file/d/1xzuUBLB0zNFo9U7-0v9R6BZzTJRuWobb/view?usp=sharing
     const block1Images = [
-        "/images/inspire1.jpg",
-        "/images/inspire2.jpg",
-        "/images/inspire3.jpg",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1v1Y4SdJ03fFoCLi295m0ajbHOyOw69eO",
+        "https://drive.google.com/uc?export=view&id=10JeCCV3ruTBzOMYDpIeNEZ5CDNFBiyHH",
+        "https://drive.google.com/uc?export=view&id=1xzuUBLB0zNFo9U7-0v9R6BZzTJRuWobb",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
     ];
     const block2Images = [
-        "/images/inspire4.jpg",
-        "/images/inspire5.jpg",
-        "/images/inspire6.jpg",
+         "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
+        "https://drive.google.com/uc?export=view&id=1F1e1-mF_CGZGJ3y0NrhAZ7urM83Yk2F7",
     ];
     const block3Images = [
-        "/images/inspire7.jpg",
-        "/images/inspire8.jpg",
+        "https://drive.google.com/uc?export=view&id=1v1Y4SdJ03fFoCLi295m0ajbHOyOw69eO",
+        "https://drive.google.com/uc?export=view&id=10JeCCV3ruTBzOMYDpIeNEZ5CDNFBiyHH",
         "/images/inspire9.jpg",
     ];
     const block4Images = [
-        "/images/inspire10.jpg",
-        "/images/inspire11.jpg",
+        "https://drive.google.com/uc?export=view&id=1v1Y4SdJ03fFoCLi295m0ajbHOyOw69eO",
+        "https://drive.google.com/uc?export=view&id=10JeCCV3ruTBzOMYDpIeNEZ5CDNFBiyHH",
         "/images/inspire12.jpg",
     ];
     const block5Images = [
-        "/images/inspire13.jpg",
-        "/images/inspire14.jpg",
+        "https://drive.google.com/uc?export=view&id=1v1Y4SdJ03fFoCLi295m0ajbHOyOw69eO",
+        "https://drive.google.com/uc?export=view&id=10JeCCV3ruTBzOMYDpIeNEZ5CDNFBiyHH",
         "/images/inspire15.jpg",
     ];
     const block6Images = [
-        "/images/inspire16.jpg",
-        "/images/inspire17.jpg",
+        "https://drive.google.com/uc?export=view&id=1v1Y4SdJ03fFoCLi295m0ajbHOyOw69eO",
+        "https://drive.google.com/uc?export=view&id=10JeCCV3ruTBzOMYDpIeNEZ5CDNFBiyHH",
         "/images/inspire18.jpg",
     ];
 
@@ -60,7 +67,7 @@ export default function Header() {
                     gsap.to(img, { opacity: 1, duration: 0.8 });
                 },
             });
-        }, 4000);
+        }, 10000);
     };
 
     // Hover effects
@@ -123,7 +130,9 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block1)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md"
             >
-                <img
+                <Image
+                    height={200}
+                    width={200}
                     src={block1Images[0]}
                     alt="Inspire event"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
@@ -137,9 +146,11 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block2)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
             >
-                <img
+                <Image
                     src={block2Images[0]}
-                    alt="Inspire gallery"
+                    height={200}
+                    width={200}
+                    alt="Inspire event"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
                 />
             </div>
@@ -151,7 +162,9 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block3)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
             >
-                <img
+                <Image
+                    height={200}
+                    width={200}
                     src={block3Images[0]}
                     alt="Inspire students"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
@@ -165,7 +178,9 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block4)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md"
             >
-                <img
+                <Image
+                    height={200}
+                    width={200}
                     src={block4Images[0]}
                     alt="Inspire campus"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
@@ -175,7 +190,7 @@ export default function Header() {
             {/* Main Text Section */}
             <div className="fade-section col-span-2 md:col-span-3 row-span-2 flex flex-col justify-end border border-gray-300 border-px backdrop-blur-lg p-4 md:p-8">
                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-                    Discover the <br /> future of the web
+                    Where Ambition  <br /> Meets Precision.
                 </h1>
                 <p className="text-base md:text-lg text-gray-700 max-w-xl">
                     Join us at{" "}
@@ -192,7 +207,9 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block5)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
             >
-                <img
+                <Image
+                    height={200}
+                    width={200}
                     src={block5Images[0]}
                     alt="Inspire gallery"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
@@ -206,7 +223,9 @@ export default function Header() {
                 onMouseLeave={() => handleLeave(block6)}
                 className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
             >
-                <img
+               <Image
+                    height={200}
+                    width={200}
                     src={block6Images[0]}
                     alt="Inspire students"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"

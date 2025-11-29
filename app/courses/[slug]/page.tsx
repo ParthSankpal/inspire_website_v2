@@ -11,14 +11,19 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+
   return (
-    seoConfig[params.slug] || {
+    seoConfig[slug] || {
       title: "Inspire Academy Kolhapur",
       description: "Best coaching for IIT-JEE & NEET",
     }
   );
 }
 
-export default function CourseDetailPage({ params }: Props) {
-  return <CourseDetailClient slug={params.slug} />;
+
+export default async function CourseDetailPage({ params }: Props) {
+  const { slug } = await params;
+
+  return <CourseDetailClient slug={slug} />;
 }
