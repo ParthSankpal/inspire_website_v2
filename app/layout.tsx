@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 
   description:
     "Inspire Academy Kolhapur offers the best IIT-JEE, NEET, MHT-CET & Foundation coaching with expert faculty, advanced study pattern, and excellent results.",
-
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "Inspire Academy Kolhapur",
     "IIT JEE coaching Kolhapur",
