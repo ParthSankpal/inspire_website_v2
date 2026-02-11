@@ -21,16 +21,16 @@ type WeeklyTest = {
 
 type Schedule =
   | {
-      type: "regular" | "sunday";
-      title: string;
-      sessions: RegularSession[];
-      weeklyTest?: WeeklyTest;
-    }
+    type: "regular" | "sunday";
+    title: string;
+    sessions: RegularSession[];
+    weeklyTest?: WeeklyTest;
+  }
   | {
-      type: "upcoming";
-      title: string;
-      message: string;
-    };
+    type: "upcoming";
+    title: string;
+    message: string;
+  };
 
 export interface ExamDetail {
   title: string;
@@ -45,6 +45,7 @@ export interface ExamDetail {
 export interface CourseData {
   title: string;
   description: string;
+  impPoints?: string[];
   exams: ExamDetail[];
   schedule: Schedule;
 }
@@ -337,28 +338,73 @@ export const getExamData = (slug: string): CourseData | null => {
 
     // ------------------ CBSE FOUNDATION ------------------
     "foundation-cbse": {
-      title: "CBSE Academic Program (Class 8–10)",
-      description:
-        "Program focusing on conceptual strengthening in Science, Mathematics, English, and Social Science, aligned with CBSE and NCERT standards, based on the NEP 2020 competency-based learning pattern.",
+      title: "CBSE Academic Coaching Classes (2026–2027)",
+      description: `
+                CBSE Academic Coaching Classes – Academic Year 2026–2027  
+                For Classes 8, 9 & 10  
+
+                The CBSE Academic Coaching Program at Inspire Academy is designed to provide strong conceptual clarity, exam-oriented preparation, and continuous academic monitoring.
+
+                The program strictly follows the latest CBSE curriculum and examination pattern, ensuring students are fully prepared for school exams, periodic tests, board examinations, and future competitive pathways.
+`,
+
+      impPoints: [
+        "Experienced & subject-expert faculty",
+        "Small batch sizes for individual attention",
+        "Structured syllabus completion with zero backlog",
+        "Regular testing & performance tracking",
+        "Strong discipline & academic monitoring",
+        "Seamless bridge between CBSE academics & competitive exams",
+        "Parent–Teacher Meetings after every periodic test",
+        "Performance analysis & improvement tracking"
+      ],
+
       exams: [
         {
-          title: "CBSE Academics Curriculum",
+          title: "CBSE Curriculum (Class 8–10)",
           syllabus:
-            "Science, Mathematics, English, and Social Science as per CBSE & NCERT guidelines.",
-          month: "Academic year schedule.",
-          examPattern: { Mode: "School-based exams", Duration: "As per CBSE norms" },
+            "Mathematics, Science, Social Science as per latest CBSE & NCERT guidelines aligned with NEP 2020 competency-based pattern.",
+          month: "Academic Year 2026–2027",
+          examPattern: {
+            Mode: "School & Board Based Exams",
+            Pattern: "Competency-based & NCERT aligned",
+            Evaluation: "Periodic Tests, Half-Yearly, Pre-Boards & Annual Exams",
+          },
           topColleges: [],
-          attempts: "Annual examinations.",
-          qualifyingCriteria: { Academic: "Class 8–10 students", Marks: "Promotion-based evaluation." },
+          attempts: "Annual Board Evaluation",
+          qualifyingCriteria: {
+            Academic: "Students of Class 8, 9 & 10 (CBSE Board)",
+            Marks: "Promotion & Board Qualification as per CBSE norms",
+          },
         },
       ],
+
       schedule: {
-        type: "upcoming",
-        title: "Schedule Coming Soon",
-        message:
-          "Our CBSE Academic Program will be launched soon with structured schedules and assessment plans.",
+        type: "regular",
+        title: "Class Schedule (Monday – Saturday)",
+        sessions: [
+          { time: "5:00 PM – 5:45 PM", activity: "Subject 1 (Mathematics / Rotation)" },
+          { time: "5:45 PM – 6:30 PM", activity: "Subject 2 (Science / Rotation)" },
+          { time: "6:30 PM – 7:15 PM", activity: "Subject 3 (Social Science / Rotation)" },
+          { time: "6 Days / Week", activity: "Regular academic coverage & doubt resolution" },
+          { time: "Weekly Test", activity: "Structured Tests based on syllabus covered" },
+        ],
+        weeklyTest: {
+          title: "Assessment & Examination Plan",
+          description: `
+Weekly Tests – Every week (recently completed syllabus)  
+Periodic Test 1 – As per CBSE calendar  
+Periodic Test 2 – As per CBSE calendar  
+Half-Yearly Exam – Strict CBSE pattern  
+Annual Exam – Strict CBSE pattern  
+Two Pre-Board Exams after 50% syllabus completion  
+Minimum Five Full-Length Pre-Boards before final exams  
+`,
+        },
       },
     },
+
+
   };
 
   return data[slug] ?? null;

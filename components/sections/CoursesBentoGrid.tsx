@@ -15,7 +15,7 @@ type CourseCard = {
   subtitle: string;
   description: string;
   image: string;
-  colspan?:string;
+  colspan?: string;
   slug: string;
 };
 
@@ -77,10 +77,41 @@ const foundationCourses: CourseCard[] = [
     subtitle: "Boards + Competitive Readiness",
     description: "Prepare for boards while developing problem-solving habits.",
     image: "/images/class10.jpg",
-    colspan:"sm:col-span-2 lg:col-span-1",
+    colspan: "sm:col-span-2 lg:col-span-1",
     slug: "foundation",
   },
-  
+
+];
+
+export const CBSEAcademicCourses: CourseCard[] = [
+  {
+    className: "8th Class",
+    course: "CBSE Foundation",
+    subtitle: "NTSE & Olympiad Track",
+    description:
+      "Aligned with CBSE curriculum. Focus on conceptual clarity in Maths & Science while preparing for NTSE, Olympiads & future competitive exams.",
+    image: "/images/class8.jpg",
+    slug: "foundation-cbse",
+  },
+  {
+    className: "9th Class",
+    course: "CBSE Foundation",
+    subtitle: "Target NTSE & Olympiads",
+    description:
+      "Strong CBSE syllabus coverage with advanced problem-solving practice. Early competitive exposure for NTSE, Olympiads & scholarship exams.",
+    image: "/images/class9.jpg",
+    slug: "foundation-cbse",
+  },
+  {
+    className: "10th Class",
+    course: "CBSE Foundation",
+    subtitle: "Boards + Competitive Readiness",
+    description:
+      "Complete CBSE board preparation with structured revision, PYQs practice & competitive-level questions to build strong fundamentals for Class 11 & beyond.",
+    image: "/images/class10.jpg",
+    colspan: "sm:col-span-2 lg:col-span-1",
+    slug: "foundation-cbse",
+  },
 ];
 
 export default function CoursesBentoGrid() {
@@ -210,13 +241,60 @@ export default function CoursesBentoGrid() {
             Foundation Courses
           </h4>
           <h2 className="text-3xl md:text-[40px] font-semibold  mt-3 max-w-5xl mx-auto">
-            Build a strong foundation early — for NTSE, Olympiads & future success
+            Build a strong foundation early for HB, Olympiads & future success
           </h2>
         </div>
 
         {/* Foundation Course Cards */}
         <div className="mt-16 grid text-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {foundationCourses.map((course, index) => (
+            <div
+              key={index + mainCourses.length}
+              ref={(el) => {
+                cardRefs.current[index + mainCourses.length] = el;
+              }}
+              onClick={() => handleRedirect(course.slug)}
+              className={` cursor-pointer border border-gray-200 overflow-hidden bg-white hover:shadow-xl transition-transform duration-500 hover:-translate-y-2 ${course.colspan}`}
+            >
+              <div className="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-lg font-semibold opacity-90">{course.className}</h3>
+                  <h2 className="text-2xl md:text-[32px] font-bold mt-1">{course.course}</h2>
+                  <p className="text-sm mt-1 opacity-90">{course.subtitle}</p>
+                </div>
+                <p className="text-xs mt-4 opacity-80">{course.description}</p>
+              </div>
+              <Image
+                src={course.image}
+                alt={course.className}
+                width={400}
+                height={250}
+                className="w-full hidden md:block md:h-40 object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ==== CBSE Academic Program ==== */}
+      <div className="mt-24 w-full max-w-6xl">
+        <div ref={foundationHeadingRef} className=" px-6">
+          <h4 className="text-[#ea018c] font-semibold text-sm uppercase tracking-wide">
+            CBSE Academic Program
+          </h4>
+          <h2 className="text-3xl md:text-[40px] font-semibold mt-3 max-w-5xl mx-auto">
+            Prepare students for both board exams and competitive pathways from an early stage.
+          </h2>
+          {/* <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-sm md:text-base">
+            Our CBSE academic program is designed to strengthen conceptual clarity,
+            improve analytical thinking, and prepare students for both board exams
+            and competitive pathways from an early stage.
+          </p> */}
+        </div>
+
+        {/* Foundation Course Cards */}
+        <div className="mt-16 grid text-start grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+          {CBSEAcademicCourses.map((course, index) => (
             <div
               key={index + mainCourses.length}
               ref={(el) => {

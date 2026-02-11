@@ -13,12 +13,13 @@ type CourseDetailClientProps = {
 };
 
 export default function CourseDetailPage({ slug }: CourseDetailClientProps) {
- 
+
   const data = getExamData(slug);
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const accordionRefs = useRef<HTMLDivElement[]>([]);
   const scheduleRef = useRef<HTMLDivElement>(null);
+  const impPointsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -80,6 +81,27 @@ export default function CourseDetailPage({ slug }: CourseDetailClientProps) {
           }
         );
       }
+
+      // === Important Points Animation
+      if (impPointsRef.current) {
+        gsap.fromTo(
+          impPointsRef.current.children,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: impPointsRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
     }, sectionRef);
 
     return () => ctx.revert();
@@ -102,6 +124,28 @@ export default function CourseDetailPage({ slug }: CourseDetailClientProps) {
         {data.title}
       </h1>
       <p className="course-desc text-gray-700 mt-3">{data.description}</p>
+
+      {/* ===== Why Choose Inspire Academy ===== */}
+      {data.impPoints && data.impPoints.length > 0 && (
+        <div className="mt-8" ref={impPointsRef}>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            Why Choose Inspire Academy?
+          </h3>
+
+          <ul className=" grid grid-cols-1 md:grid-cols-2 gap-2">
+            {data.impPoints.map((point, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-3 bg-blue-50 p-3 rounded-lg shadow-sm"
+              >
+                <span className="text-[#5696F6] font-bold">✓</span>
+                <span className="text-gray-700">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
 
       {/* ===== Exams Covered (Accordion) ===== */}
       <div className="mt-10">

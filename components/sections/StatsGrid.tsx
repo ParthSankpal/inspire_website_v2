@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -71,25 +71,32 @@ export default function StatsAchievementsGrid() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
+ useLayoutEffect(() => {
     if (!sectionRef.current) return;
 
-    gsap.fromTo(
-      cardRefs.current,
-      { y: 60, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 50%",
-          toggleActions: "play none none none",
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRefs.current,
+        {
+          y: 60,
+          opacity: 0,
         },
-      }
-    );
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 60%",
+            once: true, // 👈 prevents re-animation
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert(); // 👈 CRITICAL
   }, []);
 
   return (

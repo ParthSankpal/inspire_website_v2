@@ -16,51 +16,51 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Aarav Sharma",
+    name: "Milind Mali",
     role: "student",
-    collegeOrProfession: "IIT Bombay",
+    collegeOrProfession: "SPIT, Mumbai",
     message:
-      "Inspire Academy guided me through every concept and mock test with precision. The mentors’ support was invaluable!",
+      "Inspire Academy is an excellent choice for JEE ,NEET and CET preparation. The teachers explain concepts clearly and focus strongly on fundamentals and problem-solving. Regular tests, good study material, and proper guidance helped me improve consistently. The faculty is supportive and always ready to clear doubts. Overall, my experience at Inspire Academy for JEE preparation was very positive and truly motivating.",
     rating: 5,
   },
   {
-    name: "Priya Nair",
+    name: "Viraj Killedar",
     role: "student",
-    collegeOrProfession: "AIIMS Delhi",
+    collegeOrProfession: "VIT, Pune",
     message:
-      "Their approach to Biology and Chemistry was phenomenal. I gained immense confidence through consistent tests.",
+      "Inspire academy really help me score well in my JEE and MHT CET exam. Their end to end system with learning materials, mock tests & focus batches is a testimonial to the result they achieve each year.",
     rating: 5,
   },
   {
-    name: "Rohan Patil",
+    name: "Jayantrao Thorat",
     role: "student",
-    collegeOrProfession: "10th Foundation Student",
+    collegeOrProfession: "",
     message:
-      "The Foundation course built my basics perfectly. I started loving math and science again thanks to the fun teaching style!",
-    rating: 4,
-  },
-  {
-    name: "Sneha Kulkarni",
-    role: "student",
-    collegeOrProfession: "VIT Pune",
-    message:
-      "Balanced preparation for CET and boards made all the difference. I cracked CET with flying colors!",
+      "I had an excellent experience preparing for my JEE exam at Inspire Academy. The quality of teaching is truly impressive. The faculty are experienced, patient, and very knowledgeable, and they are always ready to clear doubts and explain even difficult concepts in a simple and understandable way. I am genuinely grateful to the entire team for their constant guidance, support, and motivation throughout my preparation.",
     rating: 5,
   },
   {
-    name: "Sunita Joshi",
+    name: "Sumeet Chougale",
+    role: "student",
+    collegeOrProfession: "PCCOE, Pune",
+    message:
+      "Great institute for 11th & 12th IIT-NEET prep. The teachers are supportive and provide excellent 1-to-1 guidance. Overall, a positive learning environment that really helps students stay focused and confident.",
+    rating: 5,
+  },
+  {
+    name: "Yash Kagi",
+    role: "student",
+    collegeOrProfession: "",
+    message:
+      "A great institute for preparing for JEE and NEET, you should definitely join this academy if you want to achieve success in your life, without inspire you'll never be inspired in life. You will have a great time here make lots of friends and memories. They prepare you for life and not just an exam.",
+    rating: 5,
+  },
+  {
+    name: "Manjiri Deshpande",
     role: "parent",
-    collegeOrProfession: "Teacher, Kolhapur",
+    collegeOrProfession: "House wife",
     message:
-      "As a parent, I was amazed by the dedication and personal attention each student receives at Inspire Academy.",
-    rating: 5,
-  },
-  {
-    name: "Ramesh Patil",
-    role: "parent",
-    collegeOrProfession: "Business Owner",
-    message:
-      "My daughter’s confidence improved drastically. The consistent mentoring and communication from Inspire was exceptional!",
+      "Teacher are best",
     rating: 5,
   },
 ];
@@ -134,13 +134,13 @@ export default function TestimonialsGrid() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="border border-gray-200 sm:h-68 overflow-hidden bg-white  transition-transform duration-500 hover:-translate-y-2 "
+              className="border border-gray-200 sm:h-auto overflow-hidden bg-white  transition-transform duration-500 hover:-translate-y-2 "
             >
               {/* Placeholder Space (Image Area) */}
               
 
               {/* Testimonial Content */}
-              <div className="p-6 flex flex-col justify-between h-full">
+              <div className="p-6 flex flex-col h-full">
                 <div>
                   <h3 className="text-2xl md:text-[32px] font-bold my-1">
                     {t.name}

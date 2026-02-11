@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { BsArrowUpRight } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
     // Refs for each animated image block
@@ -93,8 +94,8 @@ export default function Header() {
         // Initial fade-in
         gsap.fromTo(
             ".fade-section",
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power2.out" }
+            { opacity: 0, y: 60 },
+            { opacity: 1, y: 0,delay:1, duration: 1, stagger: 0.2, ease: "power2.out" }
         );
 
         // Start independent loops
@@ -237,7 +238,7 @@ export default function Header() {
             {/* Watch Recordings CTA */}
             <div className="fade-section col-span-2 row-span-1 border border-gray-300 border-px p-4 md:p-6 transition-all hover:p-0 duration-700 ease-in-out 
                 transform  relative overflow-hidden group">
-                <div
+                <Link href="/results"
                     className="
                         bg-yellow-400 flex justify-between items-center h-full 
                         p-6 md:p-8
@@ -275,7 +276,7 @@ export default function Header() {
         transition-opacity duration-700 ease-in-out
       "
                     ></div>
-                </div>
+                </Link>
             </div>
 
 

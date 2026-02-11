@@ -54,7 +54,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className=" montserrat-500  bg-white px-6 py-12 md:px-16 md:py-20">
+    <footer ref={footerRef} className=" montserrat-500  border-t bg-white px-6 py-12 md:px-16 md:py-20">
       {/* Top CTA Row */}
       <div className="footer-section flex flex-col md:flex-row justify-end items-center mb-14 border-b border-white/10 pb-10">
         

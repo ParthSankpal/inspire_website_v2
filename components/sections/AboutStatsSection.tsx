@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,7 +10,7 @@ const stats = [
   { number: 17, suffix: "+", label: "Team members" },
   { number: 2018, suffix: "", label: "Year Founded" },
   { number: 1, suffix: "K+", label: "Students" },
-  { number: 335, suffix: "M", label: "In total funding" },
+  { number: 7, suffix: "", label: "Years sof serving Kolhapur" },
 ];
 
 const AboutStatsSection = () => {

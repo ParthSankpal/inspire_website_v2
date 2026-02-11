@@ -49,8 +49,7 @@ const VisionSection = () => {
           Vision
         </p>
         <h2 className="text-3xl md:text-[42px] md:text-5xl font-extrabold leading-tight ">
-          Our vision is to build the world’s most powerful website experience
-          platform.
+          To become one of India&apos;s leading educational institutes known for academic excellence, innovative teaching methods, and consistent student success in competitive examinations.
         </h2>
       </div>
 
@@ -62,19 +61,18 @@ const VisionSection = () => {
             Core <span className="line-through text-[#ea018c]">values</span>{" "}
             behaviors
           </h3>
-          <p className="text-gray-400 text-sm sm:text-base max-w-sm">
-            We see every day as an opportunity to turn values into action
-            through our 4 core behaviors.
+          <p className="text-gray-400 text-sm sm:text-base max-w-lg">
+            At Inspire Academy, our values guide everything we do. We see each day as an opportunity to turn these values into meaningful action through our 4 core behaviors.
           </p>
         </div>
 
         {/* Right */}
         <div>
           <ol className="space-y-3 text-base lg:text-2xl font-semibold">
-            <li>1. Build lasting customer trust</li>
+            <li>1. Build Lasting Student & Parent Trust</li>
             <li>2. Win together</li>
             <li>3. Reinvent ourselves</li>
-            <li>4. Deliver with speed, quality, and craft</li>
+            <li>4. Deliver With Speed, Quality & Craft</li>
           </ol>
         </div>
       </div>

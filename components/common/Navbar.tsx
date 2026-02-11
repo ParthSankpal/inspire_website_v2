@@ -99,7 +99,7 @@ export default function Navbar() {
   const mobileMenuRef = React.useRef<HTMLDivElement>(null);
 
   // Animate navbar on mount
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     gsap.fromTo(
       navRef.current,
       { y: -60, opacity: 0 },
@@ -108,7 +108,7 @@ export default function Navbar() {
   }, []);
 
   // Animate mobile menu open/close
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (mobileMenuRef.current) {
       if (mobileOpen) {
         gsap.fromTo(
