@@ -63,6 +63,22 @@ const testimonials: Testimonial[] = [
       "Teacher are best",
     rating: 5,
   },
+  {
+    name: "Aditya Kadam",
+    role: "student",
+    collegeOrProfession: "NIT, Nagpur",
+    message:
+      "Extremely good teaching, it is because of Inspire academy that I got into NIT Nagpur.",
+    rating: 5,
+  },
+  {
+    name: "Vidit T. Mane",
+    role: "student",
+    collegeOrProfession: "",
+    message:
+      "Inspire Academy is an excellent coaching institute for NEET and JEE preparation. The faculty is highly knowledgeable, supportive, and explains concepts clearly. Their structured teaching methods, regular tests, and personalized guidance help students build strong fundamentals and confidence. The study material is well-designed and exam-oriented. Overall, Inspire Academy provides a motivating learning environment and is a great choice for students aiming for success in competitive exams.",
+    rating: 4.5,
+  },
 ];
 
 export default function TestimonialsGrid() {

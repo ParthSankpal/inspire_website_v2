@@ -143,7 +143,7 @@ const allExamDetails: Record<string, ExamDetail> = {
     attempts: "Once a year.",
     qualifyingCriteria: {
       Academic: "10+2 with PCM/PCB",
-      Marks: "Minimum 60% (65% for SC/ST/PwD).",
+      Marks: "Minimum 60% (50% for SC/ST/PwD).",
     },
   },
 
