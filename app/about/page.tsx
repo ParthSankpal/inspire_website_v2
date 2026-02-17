@@ -14,7 +14,7 @@ export default function ContactUs() {
     <section className=" bg-white ">
       <AboutHeader />
       <VisionSection />
-      <PressSection />
+      {/* <PressSection /> */}
       <ReviewsSection />
       <AboutStatsSection />
     </section>

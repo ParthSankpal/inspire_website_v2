@@ -30,8 +30,8 @@ const statsData: StatItem[] = [
     description:
       "Students placed in top NITs & Top State Government Engineering Colleges",
     layout: "stack",
-    colSpan: "col-span-1",
-    rowSpan: "row-span-2",
+    colSpan: "col-span-1 md:col-span-2 lg:col-span-1",
+    rowSpan: "lg:row-span-2",
   },
   {
     number: "17",
@@ -47,8 +47,8 @@ const statsData: StatItem[] = [
     description:
       "Students scored above 99 Percentile, 168+ students above 90%, securing top ranks.",
     layout: "stack",
-    colSpan: "col-span-1",
-    rowSpan: "row-span-2",
+    colSpan: "col-span-1 md:col-span-2 lg:col-span-1",
+    rowSpan: "lg:row-span-2",
   },
   {
     number: "85%",

@@ -243,7 +243,7 @@ export const getExamData = (slug: string): CourseData | null => {
           },
         ],
         weeklyTest: {
-          title: "Weekly Test Plan (Every Monday)",
+          title: "Weekly Test Plan (Every Sunday)",
           engineering: {
             marks: "300 Marks",
             description:
@@ -279,7 +279,7 @@ export const getExamData = (slug: string): CourseData | null => {
           },
         ],
         weeklyTest: {
-          title: "Weekly Test Plan (Every Monday)",
+          title: "Weekly Test Plan (Every Sunday)",
           medical: {
             marks: "720 Marks",
             description:
@@ -329,7 +329,7 @@ export const getExamData = (slug: string): CourseData | null => {
           },
         ],
         weeklyTest: {
-          title: "Weekly Evaluation (Every Sunday)",
+          title: "Weekly Evaluation (Every Saturday)",
           description:
             "Topic-wise tests and quizzes including NTSE and Olympiad-style analytical questions for steady conceptual growth.",
         },

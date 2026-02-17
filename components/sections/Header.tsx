@@ -54,22 +54,34 @@ export default function Header() {
     ];
 
     // Utility for cycling images inside each block
-    const cycleImages = (ref: any, images: any) => {
-        if (!ref.current) return;
-        const img = ref.current.querySelector("img");
-        let i = 0;
-        setInterval(() => {
-            i = (i + 1) % images.length;
-            gsap.to(img, {
-                opacity: 0,
-                duration: 0.8,
-                onComplete: () => {
-                    img.src = images[i];
-                    gsap.to(img, { opacity: 1, duration: 0.8 });
-                },
-            });
-        }, 10000);
-    };
+   const cycleImages = (ref: any, images: string[]) => {
+  if (!ref.current) return;
+
+  const img = ref.current.querySelector("img");
+  let i = 0;
+
+  const interval = setInterval(() => {
+    i = (i + 1) % images.length;
+
+    gsap.to(img, {
+      opacity: 0,
+      scale: 1.05,
+      duration: 0.6,
+      onComplete: () => {
+        img.src = images[i];
+
+        gsap.fromTo(
+          img,
+          { opacity: 0, scale: 1.1 },
+          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+        );
+      },
+    });
+  }, 10000);
+
+  return () => clearInterval(interval);
+};
+
 
     // Hover effects
     const handleHover = (ref: any) => {

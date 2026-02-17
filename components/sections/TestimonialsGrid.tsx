@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     role: "student",
     collegeOrProfession: "SPIT, Mumbai",
     message:
-      "Inspire Academy is an excellent choice for JEE ,NEET and CET preparation. The teachers explain concepts clearly and focus strongly on fundamentals and problem-solving. Regular tests, good study material, and proper guidance helped me improve consistently. The faculty is supportive and always ready to clear doubts. Overall, my experience at Inspire Academy for JEE preparation was very positive and truly motivating.",
+      "Inspire Academy is an excellent choice for JEE, NEET and CET preparation. The teachers explain concepts clearly and focus strongly on fundamentals and problem-solving. Regular tests, good study material, and proper guidance helped me improve consistently. The faculty is supportive and always ready to clear doubts. Overall, my experience at Inspire Academy for JEE preparation was very positive and truly motivating.",
     rating: 5,
   },
   {

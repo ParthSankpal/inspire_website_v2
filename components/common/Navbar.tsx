@@ -19,7 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import InspireAcademyImage from "@/public/InspireAcademyImage.jpg";
+import InspireAcademyImage from "@/public/InspireAcademyImage.png";
 import gsap from "gsap";
 
 // ----------------- DATA -----------------
@@ -143,8 +143,8 @@ export default function Navbar() {
           <Image
             src={InspireAcademyImage}
             alt="Inspire Academy"
-            width={45}
-            height={45}
+            width={400}
+            height={400}
             className="object-cover h-10 w-full"
           />
         </Link>

@@ -9,23 +9,23 @@ import ArrowStack from './ArrowStack';
 const points = [
     {
         icon: <ArrowTrendingDownIcon className=' h-8 w-8 text-[#081D25]' />,
-        top: 'Vendors who over promise but miss deadlines and fail projects',
-        bottom: 'Break down critical communications and collaboration',
+        top: 'Institutes that make ambitious promises but fail to deliver structured mentorship',
+        bottom: 'Confidence begins to erode, and motivation slowly declines',
     },
     {
         icon: <Cog8ToothIcon className=' h-8 w-8 text-[#081D25]' />,
-        top: 'Complex systems that disappoint users and frustrate teams',
-        bottom: 'Instantly lose user adoption, confidence and most importantly, trust',
+        top: 'Endless studying without true conceptual clarity or strategic direction',
+        bottom: 'Hard work fails to translate into measurable progress',
     },
     {
         icon: <ExclamationCircleIcon className=' h-8 w-8 text-[#081D25]' />,
-        top: 'Pressure to keep up with changing tech, fearing costly mistakes',
-        bottom: 'Stall progress or trigger costly escalations without any ROI',
+        top: 'The mounting pressure of vast syllabi, board exams, and competitive benchmarks',
+        bottom: 'Stress replaces curiosity, and learning feels overwhelming',
     },
     {
         icon: <FiShield className=' h-8 w-8 text-[#081D25]' />,
-        top: 'Doubts about your tech partners’ trustworthiness and support',
-        bottom: 'Drain time and resources on fixes instead of focus on innovation and growth',
+        top: 'Uncertainty about whether truly aligned with national-level standards',
+        bottom: 'Valuable time and effort are spent without achieving meaningful results',
     },
 ];
 
@@ -80,9 +80,10 @@ export default function PressureSection() {
             <div className=''>
                 <div ref={headingRef}>
 
-                    <h4 className="text-[#ea018c] font-semibold text-base uppercase tracking-wide">We get it</h4>
+                    <h4 className="text-[#ea018c] font-semibold text-base uppercase tracking-wide">WE UNDERSTAND</h4>
                     <h2 className="text-3xl md:text-[40px] font-semibold  text-[#081D25] mt-3 max-w-5xl mx-auto">
-                        The pressure to deliver flawless technology solutions can wear down even the most seasoned professionals.
+                        The journey to cracking JEE, NEET, and CET
+                        can test the resilience of even the most determined students.
                     </h2>
                 </div>
 

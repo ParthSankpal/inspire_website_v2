@@ -13,6 +13,7 @@ import {
 
 import { ResultCard } from "@/components/sections/ResultCard";
 import StatsAchievementsGrid from "@/components/sections/StatsGrid";
+import ResultsBentoGrid from "@/components/sections/ResultCardWithBlocks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,8 @@ export default function ResultsPage() {
 
   return (
     <div className="pb-14">
+
+          <ResultsBentoGrid/>
 
       <StatsAchievementsGrid/>
 
