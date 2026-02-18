@@ -50,7 +50,7 @@ export const jeeMain2026Session1: ExamPerformance = {
       percentile: 86.8828639,
     },
     {
-      photo: "photo_id_10",
+      photo: "1QuUiFad7-QtYyc1t6yv69TbqceqYApYQ",
       name: "Tamboli Arfan Samir",
       percentile: 84.3609068,
     },

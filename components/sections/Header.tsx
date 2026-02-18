@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { BsArrowUpRight } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
+import { jeeMain2026Session1 } from "@/data/resultsJee2026session01";
+import TopResultBlock from "./TopResultBlock";
 
 export default function Header() {
     // Refs for each animated image block
@@ -54,33 +56,33 @@ export default function Header() {
     ];
 
     // Utility for cycling images inside each block
-   const cycleImages = (ref: any, images: string[]) => {
-  if (!ref.current) return;
+    const cycleImages = (ref: any, images: string[]) => {
+        if (!ref.current) return;
 
-  const img = ref.current.querySelector("img");
-  let i = 0;
+        const img = ref.current.querySelector("img");
+        let i = 0;
 
-  const interval = setInterval(() => {
-    i = (i + 1) % images.length;
+        const interval = setInterval(() => {
+            i = (i + 1) % images.length;
 
-    gsap.to(img, {
-      opacity: 0,
-      scale: 1.05,
-      duration: 0.6,
-      onComplete: () => {
-        img.src = images[i];
+            gsap.to(img, {
+                opacity: 0,
+                scale: 1.05,
+                duration: 0.6,
+                onComplete: () => {
+                    img.src = images[i];
 
-        gsap.fromTo(
-          img,
-          { opacity: 0, scale: 1.1 },
-          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
-        );
-      },
-    });
-  }, 10000);
+                    gsap.fromTo(
+                        img,
+                        { opacity: 0, scale: 1.1 },
+                        { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+                    );
+                },
+            });
+        }, 10000);
 
-  return () => clearInterval(interval);
-};
+        return () => clearInterval(interval);
+    };
 
 
     // Hover effects
@@ -107,7 +109,7 @@ export default function Header() {
         gsap.fromTo(
             ".fade-section",
             { opacity: 0, y: 60 },
-            { opacity: 1, y: 0,delay:1, duration: 1, stagger: 0.2, ease: "power2.out" }
+            { opacity: 1, y: 0, delay: 1, duration: 1, stagger: 0.2, ease: "power2.out" }
         );
 
         // Start independent loops
@@ -141,15 +143,9 @@ export default function Header() {
                 ref={block1}
                 onMouseEnter={() => handleHover(block1)}
                 onMouseLeave={() => handleLeave(block1)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md"
+                className="fade-section relative overflow-hidden backdrop-blur-md"
             >
-                <Image
-                    height={200}
-                    width={200}
-                    src={block1Images[0]}
-                    alt="Inspire event"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+                <TopResultBlock index={0} />
             </div>
 
             {/* Image Block 2 */}
@@ -157,31 +153,20 @@ export default function Header() {
                 ref={block2}
                 onMouseEnter={() => handleHover(block2)}
                 onMouseLeave={() => handleLeave(block2)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
+                className="fade-section relative overflow-hidden  backdrop-blur-md"
             >
-                <Image
-                    src={block2Images[0]}
-                    height={200}
-                    width={200}
-                    alt="Inspire event"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+                <TopResultBlock index={1} />
             </div>
+
 
             {/* Image Block 3 */}
             <div
                 ref={block3}
                 onMouseEnter={() => handleHover(block3)}
                 onMouseLeave={() => handleLeave(block3)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
+                className="fade-section relative overflow-hidden  backdrop-blur-md hidden md:block"
             >
-                <Image
-                    height={200}
-                    width={200}
-                    src={block3Images[0]}
-                    alt="Inspire students"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+                <TopResultBlock index={2} />
             </div>
 
             {/* Image Block 4 */}
@@ -189,20 +174,14 @@ export default function Header() {
                 ref={block4}
                 onMouseEnter={() => handleHover(block4)}
                 onMouseLeave={() => handleLeave(block4)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md"
+                className="fade-section relative overflow-hidden border-px backdrop-blur-md hidden md:block"
             >
-                <Image
-                    height={200}
-                    width={200}
-                    src={block4Images[0]}
-                    alt="Inspire campus"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+                <TopResultBlock index={3} />
             </div>
 
             {/* Main Text Section */}
-            <div className="fade-section col-span-2 md:col-span-3 row-span-2 flex flex-col justify-end border border-gray-300 border-px backdrop-blur-lg p-4 md:p-8">
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+            <div className="fade-section col-span-2 md:col-span-3 row-span-2 flex flex-col justify-start border border-gray-300 border-px backdrop-blur-lg p-4 md:p-8">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
                     Where Ambition  <br /> Meets Precision.
                 </h1>
                 <p className="text-base md:text-lg text-gray-700 max-w-xl">
@@ -217,15 +196,9 @@ export default function Header() {
                 ref={block5}
                 onMouseEnter={() => handleHover(block5)}
                 onMouseLeave={() => handleLeave(block5)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
+                className="fade-section relative overflow-hidden  border-px backdrop-blur-md hidden md:block"
             >
-                <Image
-                    height={200}
-                    width={200}
-                    src={block5Images[0]}
-                    alt="Inspire gallery"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+                <TopResultBlock index={4} />
             </div>
 
             {/* Image Block 6 */}
@@ -233,15 +206,9 @@ export default function Header() {
                 ref={block6}
                 onMouseEnter={() => handleHover(block6)}
                 onMouseLeave={() => handleLeave(block6)}
-                className="fade-section relative overflow-hidden border border-gray-300 border-px backdrop-blur-md hidden md:block"
+                className="fade-section relative overflow-hidden border-px backdrop-blur-md hidden md:block"
             >
-                <Image
-                    height={200}
-                    width={200}
-                    src={block6Images[0]}
-                    alt="Inspire students"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
-                />
+               <TopResultBlock index={5} />
             </div>
 
             {/* Watch Recordings CTA */}
