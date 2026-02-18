@@ -10,7 +10,7 @@ const stats = [
   { number: 17, suffix: "+", label: "Team members" },
   { number: 2018, suffix: "", label: "Year Founded" },
   { number: 1, suffix: "K+", label: "Students" },
-  { number: 7, suffix: "", label: "Years sof serving Kolhapur" },
+  { number: 7, suffix: "", label: "Years of serving Kolhapur" },
 ];
 
 const AboutStatsSection = () => {

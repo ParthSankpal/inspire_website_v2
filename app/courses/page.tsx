@@ -126,10 +126,10 @@ useEffect(() => {
             <p className="fade-up">+91 7972961299</p>
 
             <p className="fade-up uppercase font-bold pt-4">Email</p>
-            <p className="fade-up">info@inspireacademy.in</p>
+            <p className="fade-up">directorinspire01@gmail.com</p>
 
             <p className="fade-up uppercase font-bold pt-4">Business Hours</p>
-            <p className="fade-up">All 7 days : 9 AM – 8 PM</p>
+            <p className="fade-up">All 7 days : 8 AM – 7 PM</p>
           </div>
         </div>
 

@@ -16,38 +16,10 @@ type PressArticle = {
 
 const pressArticles: PressArticle[] = [
     {
-        source: "AXIOS PRO",
-        title: "Webflow acquires JavaScript library GSAP",
-        url: "https://axios.com/webflow-acquires-gsap",
-    },
-    {
-        source: "PRWeb",
-        title: "Craig Mestel joins Webflow as first Chief Financial Officer",
-        url: "https://www.prweb.com/releases/webflow-cfo-announcement",
-    },
-    {
-        source: "techradar",
-        title:
-            "Webflow announces acquisition of Intellimize – expanding beyond visual development to become an integrated Website Experience Platform",
-        url: "https://www.techradar.com/news/webflow-intellimize-acquisition",
-    },
-    {
-        source: "Martech",
-        title:
-            "Webflow adds AI-driven personalization with Intellimize acquisition",
-        url: "https://martech.org/webflow-adds-ai-driven-personalization",
-    },
-    {
-        source: "CMS Critic",
-        title: "Webflow Buys Intellimize: Why It’s An Intelligent Buy",
-        url: "https://www.cmscritic.com/webflow-buys-intellimize",
-    },
-    {
-        source: "TechCrunch",
-        title:
-            "Webflow acquires Intellimize to add AI-powered webpage personalization",
-        url: "https://techcrunch.com/webflow-intellimize-acquisition",
-    },
+        source: "Lokmat Media Pvt. Ltd.",
+        title: "JEE Main 2026 Session – 1 Outstanding Results",
+        url: "https://epaper.lokmat.com/articlepage.php?articleid=LOK_KOLK_20260218_4_15",
+    }
 ];
 
 const PressSection: React.FC = () => {
@@ -96,12 +68,12 @@ const PressSection: React.FC = () => {
                         In The Press
                     </h2>
 
-                    <Link
+                    {/* <Link
                         href="/news"
                         className="press-link text-[#ea018c] flex items-center gap-1 transition-all duration-300 text-sm font-medium hover:gap-2"
                     >
                         Press page <ArrowRight size={16} />
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3">
                     {pressArticles.map((article, index) => (

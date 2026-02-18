@@ -10,13 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 const reviews = [
   {
     platform: "Google",
-    rating: 5,
-    date: "as of 1/2025",
+    rating: 4.9,
+    date: "as of 1/2026",
   },
   {
     platform: "JustDial",
     rating: 4.6,
-    date: "as of 1/2025",
+    date: "as of 1/2026",
   },
 ];
 
