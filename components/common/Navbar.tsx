@@ -303,7 +303,10 @@ export default function Navbar() {
             <AccordionItem value="results">
               <AccordionTrigger>Results</AccordionTrigger>
               <AccordionContent className="pl-3 space-y-2">
-                {results.map((r) =>
+                 <Link href="/results" onClick={handleLinkClick}>
+                    Results till Jan 2026
+                  </Link>
+                {/* {results.map((r) =>
                   r.children ? (
                     <div key={r.title}>
                       <p className="text-sm font-semibold text-gray-700">{r.title}</p>
@@ -328,7 +331,7 @@ export default function Navbar() {
                       {r.title}
                     </Link>
                   )
-                )}
+                )} */}
               </AccordionContent>
             </AccordionItem>
 
