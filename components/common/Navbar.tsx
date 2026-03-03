@@ -151,6 +151,9 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-2 ">
+            <Link href="/" onClick={handleLinkClick} className="hover:text-[#5696F6]">
+            Home
+          </Link>
             <Link href="/about" onClick={handleLinkClick} className="hover:text-[#5696F6]">
             About
           </Link>
