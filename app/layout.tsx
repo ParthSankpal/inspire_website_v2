@@ -3,6 +3,7 @@ import "./globals.css";
 import { montserrat, fustat } from "./fonts";
 import Footer from "@/components/common/Footer";
 import ClientNavbarWrapper from "@/components/ClientNavbarWrapper";
+import { NotificationProvider } from "@/components/ui/NotificationProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://inspireacademykolhapur.com"),
@@ -75,13 +76,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="montserrat-500 antialiased">
-        <ClientNavbarWrapper />
-        <div className="flex min-h-svh flex-col">
-          <div className="grid flex-1">
-            {children}
+        <NotificationProvider>
+
+          <ClientNavbarWrapper />
+          <div className="flex min-h-svh flex-col">
+            <div className="grid flex-1">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </NotificationProvider>
       </body>
     </html>
   );

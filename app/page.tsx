@@ -1,4 +1,5 @@
 
+
 import CoursesBentoGrid from "@/components/sections/CoursesBentoGrid";
 import Header from "@/components/sections/Header";
 import PressureSection from "@/components/sections/PressureSection";
@@ -6,18 +7,23 @@ import ResultsBentoGrid from "@/components/sections/ResultCardWithBlocks";
 import StatsGrid from "@/components/sections/StatsGrid";
 import TestimonialsGrid from "@/components/sections/TestimonialsGrid";
 import WhyChoose from "@/components/sections/WhyChoose";
+import HomeNotification from "@/components/ui/HomeNotification";
+import { useNotify } from "@/components/ui/NotificationProvider";
+import StickyInstagramImage from "@/components/ui/StickyInstagram";
+import StickyInstagramEmbed from "@/components/ui/StickyInstagram";
+import StickyInstagram from "@/components/ui/StickyInstagram";
 import { seoConfig } from "@/data/seo/metadata";
 import Script from "next/script";
-
+import dhuliwandanpost from "@/public/dhuliwandanpost.jpeg"
 
 export const metadata = seoConfig.home;
 
 export default function Home() {
- 
+
 
   return (
     <>
-    <Script
+      <Script
         id="schema-home"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -47,13 +53,18 @@ export default function Home() {
       />
       <div className="min-h-screen flex flex-col items-center justify-center space-y-4 bg-gray-50">
         <div>
+          <StickyInstagramImage
+            imageSrc={dhuliwandanpost}
+            postUrl="https://www.instagram.com/p/DVYPvVWkvt6/"
+          />
+          <HomeNotification />
           <Header />
-          <ResultsBentoGrid/>
-          <StatsGrid/>
-          <WhyChoose/>
+          <ResultsBentoGrid />
+          <StatsGrid />
+          <WhyChoose />
           {/* <PressureSection/> */}
-          <CoursesBentoGrid/>
-          <TestimonialsGrid/>
+          <CoursesBentoGrid />
+          <TestimonialsGrid />
         </div>
       </div>
     </>

@@ -134,7 +134,7 @@ export default function Header() {
 
                 </div>
                 <h3>
-                    For IIT-JEE, NEET, MHT-CET, Foundation
+                    For IIT-JEE, NEET, MHT-CET, Foundation, CBSE Academics
                 </h3>
             </div>
 
