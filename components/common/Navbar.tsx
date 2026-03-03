@@ -145,13 +145,18 @@ export default function Navbar() {
             alt="Inspire Academy"
             width={400}
             height={400}
-            className="object-cover h-10 w-full"
+            className="object-cover h-16 w-full"
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-2 ">
+            <Link href="/about" onClick={handleLinkClick} className="hover:text-[#5696F6]">
+            About
+          </Link>
           <NavigationMenu>
+
+
             <NavigationMenuList className="flex items-center gap-4">
               {/* Courses */}
               <NavigationMenuItem>
@@ -252,9 +257,7 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="hidden md:flex gap-5 items-center">
-          <Link href="/about" onClick={handleLinkClick} className="hover:text-[#5696F6]">
-            About
-          </Link>
+          
           <Link href="/contact" onClick={handleLinkClick} className="hover:text-[#5696F6]">
             Contact
           </Link>
