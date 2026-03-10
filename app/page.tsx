@@ -14,7 +14,7 @@ import StickyInstagramEmbed from "@/components/ui/StickyInstagram";
 import StickyInstagram from "@/components/ui/StickyInstagram";
 import { seoConfig } from "@/data/seo/metadata";
 import Script from "next/script";
-import dhuliwandanpost from "@/public/dhuliwandanpost.jpeg"
+import gudhipadwapost from "@/public/gudhipadwapost.jpeg"
 
 export const metadata = seoConfig.home;
 
@@ -54,8 +54,8 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center space-y-4 bg-gray-50">
         <div>
           <StickyInstagramImage
-            imageSrc={dhuliwandanpost}
-            postUrl="https://www.instagram.com/p/DVYPvVWkvt6/"
+            imageSrc={gudhipadwapost}
+            postUrl="https://www.instagram.com/p/DVsK_qlkndz/"
           />
           <HomeNotification />
           <Header />
