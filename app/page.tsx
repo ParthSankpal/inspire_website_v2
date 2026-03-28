@@ -14,7 +14,9 @@ import StickyInstagramEmbed from "@/components/ui/StickyInstagram";
 import StickyInstagram from "@/components/ui/StickyInstagram";
 import { seoConfig } from "@/data/seo/metadata";
 import Script from "next/script";
-import gudhipadwapost from "@/public/gudhipadwapost.jpeg"
+import bacchahetumera from "@/public/bacchahetumera.jpeg"
+import inspireheader from "@/public/inspireheader.png"
+import Image from "next/image";
 
 export const metadata = seoConfig.home;
 
@@ -54,11 +56,19 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center space-y-4 bg-gray-50">
         <div>
           <StickyInstagramImage
-            imageSrc={gudhipadwapost}
-            postUrl="https://www.instagram.com/p/DVsK_qlkndz/"
+            imageSrc={bacchahetumera}
+            postUrl="https://www.instagram.com/inspire.academy.kolhapur/"
           />
           <HomeNotification />
+
           <Header />
+          <Image
+            src={inspireheader}
+            alt="Inspire Academy Header"
+            width={4096}
+            height={900}
+            className="w-full h-auto bg-white px-10"
+          />
           <ResultsBentoGrid />
           <StatsGrid />
           <WhyChoose />
